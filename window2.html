@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SET ORDER</title>
+
+
+      <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="zet.png" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<style type="text/css">
+     #container{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background: #161214;
+   
+    }
+    #search{
+        background-image: url(searchicon.png);
+        position: absolute;
+    width: 467px;
+    height: 37px;
+    left: 233px;
+    top: 34px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #A2B3CD;
+    background: #04030F;
+    mix-blend-mode: normal;
+    border-radius: 18.5px;
+    
+    }
+    ::placeholder{
+        color:aliceblue;
+    }
+    #HOME{
+        position: absolute;
+    width: 53px;
+    height: 24px;
+    left: 730px;
+    top: 39px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #E3EC77;
+    line-height: 19.5px;
+    text-decoration: none;
+    }
+    #NEW{
+        position: absolute;
+    width: 59px;
+    height: 24px;
+    left: 1099px;
+    top: 39px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FAE8EB;
+    text-decoration: none;
+    }
+ 
+    #MOVIE{
+        position: absolute;
+    width: 84px;
+    height: 24px;
+    left: 978px;
+    top: 39px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration: none;
+    color: #FAE8EB;
+    }
+    #TV{
+        position: absolute;
+    width: 107px;
+    height: 24px;
+    left: 834px;
+    top: 39px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration: none;
+    color: #FAE8EB;
+    }
+    .photob{
+        position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 1275px;
+    top: 34px;
+    }
+    .kai{
+        position: absolute;
+    width: 309px;
+    height: 520px;
+    left: 150px;
+    top: 200px;
+
+    }
+    #setorder{
+        position: absolute;
+    width: 416px;
+    height: 79px;
+    left: 635px;
+    top: 200px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 51px;
+    color: #FFFFFF;
+    }
+    #setab{
+        position: absolute;
+    width: 298px;
+    height: 308px;
+    left: 634px;
+    top: 280px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    }
+    .order{
+     position: absolute;
+    width: 212px;
+    height: 85px;
+    left: 635px;
+    top: 400px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    background: #E4C2C6;
+    border-radius: 25px;
+    text-transform: uppercase;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 30px;
+  border: 2px solid pink;
+  border-radius: 50px;
+  transition: var(--transition-1)
+    }
+    
+.order > ion-icon { font-size: 18px; }
+
+.order-primary { background: var(--rich-black-fogra-29); }
+
+.order-primary:is(:hover, :focus) {
+  background: red;
+  color: #E4C2C6;
+}
+     
+    .ellipse{
+        box-sizing: border-box;
+    position: absolute;
+    width: 59px;
+    height: 59px;
+    left: 1200px;
+    top: 35px;
+    
+
+    }
+    .btn{
+        box-sizing: border-box;
+    position: absolute;
+    width: 47px;
+    height: 43px;
+    left: 1357px;
+    top: 28px;
+
+    }
+    .con .order:hover{
+        background-color: #E4C2C6;
+        color: black
+
+
+    }
+    </style>
+<header class="header" data-header>
+    <div class="container">
+      <div class="overlay" data-overlay></div>
+      <a href="./index.html" class="logo">
+        <img src="./assets/images/logo.png" alt="Z Movie Rental logo">
+      </a>
+      <div class="header-actions"> 
+        <button class="search-btn">
+          <ion-icon name="search-outline"></ion-icon>
+        </button>
+      </div>
+      <button class="menu-open-btn" data-menu-open-btn>
+        <ion-icon name="reorder-two"></ion-icon>
+      </button>
+      <nav class="navbar" data-navbar>
+        <div class="navbar-top">
+          <a href="./index.html" class="logo">
+            <img src="./assets/images/logo.png" alt="Z Movie Rental logo">
+          </a>
+          <button class="menu-close-btn" data-menu-close-btn>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+        </div>
+        <ul class="navbar-list">
+          <li>
+            <a href="./index.html" class="navbar-link">Home</a>
+          </li>
+          <li>
+            <a href="#" class="navbar-link">Movie</a>
+          </li>
+          <li>
+            <a href="#" class="navbar-link">Tv Show</a>
+          </li>
+          <li>
+            <a href="#" class="navbar-link">Web Series</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+<body id="container">
+    <a href="window3.html" Name="" method="" action="" class="ellipse">
+        <input Name="IB1" type="image" src="ellipse.png">
+</a>
+    <img class=kai
+    src="Kai.jpg"
+    alt="Kai">
+    <div id="setorder">SET ORDER</div> 
+    <div id="setab"> PRICE: 10,000$ <br> MOVIE LENGTH: 98 MIN <br> DUE DATE: 2022/10/15 </div> 
+    <div class="con">
+    <a href="window6.html">
+        <Button class="order order-primary" >ORDER NOW</Button>
+    </a>
+</div>
+
+</body>
+</html>

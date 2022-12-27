@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User History</title>
+       <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="zet.png" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style type="text/css">
+             #container{
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+    top: 0px;
+    left: 0px;
+    background: #161214;
+   
+    }
+    .photo{
+        position: absolute;
+width: 185px;
+height: 120px;
+left: 34px;
+top: 0px;
+    }
+    #search{
+        background-image: url(searchicon.png);
+        position: absolute;
+    width: 467px;
+    height: 37px;
+    left: 233px;
+    top: 34px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #A2B3CD;
+    background: #04030F;
+    mix-blend-mode: normal;
+    border-radius: 18.5px;
+    
+    }
+    #HOME{
+        position: absolute;
+    width: 53px;
+    height: 24px;
+    left: 730px;
+    top: 39px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #E3EC77;
+    line-height: 19.5px;
+    text-decoration: none;
+    }
+    #NEW{
+        position: absolute;
+    width: 59px;
+    height: 24px;
+    left: 1099px;
+    top: 39px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FAE8EB;
+    text-decoration: none;
+    }
+ 
+    #MOVIE{
+        position: absolute;
+    width: 84px;
+    height: 24px;
+    left: 978px;
+    top: 39px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration: none;
+    color: #FAE8EB;
+    }
+    #TV{
+        position: absolute;
+    width: 107px;
+    height: 24px;
+    left: 834px;
+    top: 39px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration: none;
+    color: #FAE8EB;
+    }
+    .photob{
+        position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 1275px;
+    top: 34px;
+    }
+    .ellipse{
+        box-sizing: border-box;
+    position: absolute;
+    width: 59px;
+    height: 59px;
+    left: 1352px;
+    top: 19px;
+    
+
+    }
+    #about{
+        position: absolute;
+    width: 643px;
+    height: 451px;
+    left: 420px;
+    top: 175px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    color: #FFFFFF;
+    }
+    .photoel{
+        box-sizing: border-box;
+    position: absolute;
+    width: 249px;
+    height: 241px;
+    left: 74px;
+    top: 145px;
+    }
+    #userprofile{
+        position: absolute;
+    width: 323px;
+    height: 75px;
+    left: 93px;
+    top: 409px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    color: #5C5C5C;
+    }
+    #history{
+        position: absolute;
+    width: 224px;
+    height: 42px;
+    left: 93px;
+    top: 470px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    color:#FFFFFF;
+    }
+    #settings{
+        position: absolute;
+    width: 224px;
+    height: 42px;
+    left: 93px;
+    top: 524px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    color: #5C5C5C;
+    }
+    .kino1{
+        position: absolute;
+    width: 210px;
+    height: 360px;
+    left: 92px;
+    top: 600px; 
+    }
+    .kino2{
+        position: absolute;
+    width: 210px;
+    height: 360px;
+    left: 302px;
+    top: 600px; 
+    }  .kino3{
+        position: absolute;
+    width: 210px;
+    height: 360px;
+    left: 512px;
+    top: 600px; 
+    }  .kino4{
+        position: absolute;
+    width: 210px;
+    height: 360px;
+    left: 722px;
+    top: 600px; 
+    }  .kino5{
+        position: absolute;
+    width: 210px;
+    height: 360px;
+    left: 932px;
+    top: 600px; 
+    }  .kino6{
+        position: absolute;
+    width: 210px;
+    height: 360px;
+    left: 1142px;
+    top: 600px; 
+    }
+
+    </style>
+</head>
+<header class="header" data-header>
+    <div class="container">
+      <div class="overlay" data-overlay></div>
+      <a href="./index.html" class="logo">
+        <img src="./assets/images/logo.png" alt="Z Movie Rental logo">
+      </a>
+      <div class="header-actions"> 
+        <button class="search-btn">
+          <ion-icon name="search-outline"></ion-icon>
+        </button>
+      </div>
+      <button class="menu-open-btn" data-menu-open-btn>
+        <ion-icon name="reorder-two"></ion-icon>
+      </button>
+      <nav class="navbar" data-navbar>
+        <div class="navbar-top">
+          <a href="./index.html" class="logo">
+            <img src="./assets/images/logo.png" alt="Z Movie Rental logo">
+          </a>
+          <button class="menu-close-btn" data-menu-close-btn>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+        </div>
+        <ul class="navbar-list">
+          <li>
+            <a href="./index.html" class="navbar-link">Home</a>
+          </li>
+          <li>
+            <a href="#" class="navbar-link">Movie</a>
+          </li>
+          <li>
+            <a href="#" class="navbar-link">Tv Show</a>
+          </li>
+          <li>
+            <a href="#" class="navbar-link">Web Series</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<body id="container">
+        <div id="about"> FULL NAME: xxxxxxxxxxxxxxx <br>E-MAIL: xxxxxxx@xxxxxxxxx.com <br>AGE: XX <br>JOINED SINCE: XXXX.XX.XX
+    </div>
+    <img class=photoel
+    src="Ellipse3.png"
+    alt="z">
+    <a href="window3.html">
+        <div id="userprofile">USER PROFILE</div>
+    </a>
+        <a href="window4.html">
+        <div id="history">HISTORY</div>
+    </a>
+        <a href="window5.html">
+        <div id="settings">SETTINGS</div> 
+    </a>
+    <a href="movie-details.html">
+        <img class=kino1
+            src="1.png"
+            alt="z"> </div></a>
+    <a href="movie-details.html">
+       <img class=kino2
+            src="2.png"
+            alt="z"> </div></a>
+    <a href="movie-details.html">
+        <img class=kino3
+            src="3.png"
+            alt="z"> </div></a>
+     <a href="movie-details.html">
+        <img class=kino4
+            src="4.png"
+            alt="z"> </div></a>
+    <a href="movie-details.html">
+        <img class=kino5
+            src="5.png"
+            alt="z"> </div></a>
+    <a href="movie-details.html">
+      <img class=kino6
+            src="6.png"
+            alt="z"> </div></a>
+
+
+    
+</body>
+</html>

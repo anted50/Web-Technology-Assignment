@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> LOG IN </title>
+       <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="zet.png" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+    function validationName(){
+        var name=document.getElementById("name").value;
+        var pattern =/[^a-zA-Z]/g;
+        var result_name = name.match(pattern);
+       if(result_name!=null || name==""){
+            document.getElementById("spanname").innerHTML = "<font color='red'>Заавал, цагаан толгойн үсэгнээс тогтоно.</font>";
+       }
+       else{document.getElementById("spanname").innerHTML = 1;}
+        name =document.getElementById("password").value;
+       if(name.length<=6 || name.length>=11){
+        document.getElementById("spanname1").innerHTML = "<font color='red'>Заавал бөглөх талбар ба урт нь 7-12 хооронд байх ёстой.</font>";}
+        else{document.getElementById("spanname1").innerHTML = 1;
+    }
+    name =document.getElementById("userid").value;
+       if(name.length<=4 || name.length>=11){
+        document.getElementById("spanname2").innerHTML = "<font color='red'>Заавал бөглөх талбар ба урт нь 7-12 хооронд байх ёстой.</font>";}
+        else{document.getElementById("spanname2").innerHTML = 1;
+    
+       }
+       name = document.getElementById("country");
+        var selectedValue = name.options[name.selectedIndex].value;
+         if (selectedValue == "select country")
+    {
+        document.getElementById("spanname3").innerHTML = "<font color='red'>Заавал, ямар нэг орны нэр сонгогдсон байх ёстой.</font>";}
+        else{document.getElementById("spanname3").innerHTML = 1;
+     }
+      name=document.getElementById("zip").value;
+        var pattern =/.../;
+        var result_name = name.match(pattern);
+       if(result_name!=name || name==""){
+            document.getElementById("spanname4").innerHTML = "<font color='red'>Заавал, 3 оронтой тоо байх ёстой.</font>";
+       }
+       else{document.getElementById("spanname4").innerHTML = 1;
+    }
+    name=document.getElementById("email").value;
+        var pattern=/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+        var result_name = name.match(pattern);
+       if(result_name!=name || name==""){
+            document.getElementById("spanname5").innerHTML = "<font color='red'>Заавал, 3 оронтой тоо байх ёстой.</font>";
+       }
+       else{document.getElementById("spanname5").innerHTML = 1;
+    }
+    name=document.getElementById("male");
+    var name1=document.getElementById("female");
+       if(name1.checked==false && name.checked==false){
+            document.getElementById("spanname6").innerHTML = "<font color='red'>Заавал</font>";
+       }
+       else{document.getElementById("spanname6").innerHTML = 1;
+    }
+    var name=document.getElementById("c1");
+    name2=document.getElementById("c2");
+     var s=0;
+     if(name.checked==true) s++;
+     if(name2.checked==true) s++;
+    
+        if(s!=1){
+            document.getElementById("spanname7").innerHTML = "<font color='red'>Заавал 1-ийг сонгоно уу.</font>";
+       }
+       else{document.getElementById("spanname7").innerHTML = 1;}
+       if(document.getElementById("spanname7").innerHTML == 1 && document.getElementById("spanname6").innerHTML == 1 && 
+       document.getElementById("spanname5").innerHTML == 1 && document.getElementById("spanname4").innerHTML == 1 && document.getElementById("spanname3").innerHTML == 1
+       && document.getElementById("spanname2").innerHTML == 1 && document.getElementById("spanname1").innerHTML == 1 && document.getElementById("spanname").innerHTML == 1){
+        window.location.href="window1.html";
+       }
+    }
+</script>
+       <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="zet.png" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+   <style type="text/css">
+    .pattern{
+      position: absolute;
+      left: 300px;
+      top: 2px;
+    background: url("pattern dark.jpg") repeat;
+    background-size: cover;
+    background-position: center;
+    padding-block: var(--section-padding);
+    
+    }
+    .photo{
+      position: relative;
+      left:150px;
+    }
+.order{
+     position: absolute;
+    width: 212px;
+    height: 85px;
+    left: 635px;
+    top: 400px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    background: #E4C2C6;
+    border-radius: 25px;
+    text-transform: uppercase;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 30px;
+  border: 2px solid pink;
+  border-radius: 50px;
+  transition: var(--transition-1)
+    }
+    
+.order > ion-icon { font-size: 18px; }
+
+.order-primary { background: var(--rich-black-fogra-29); }
+
+.order-primary:is(:hover, :focus) {
+  background: red;
+  color: #E4C2C6;
+}
+     
+    .ellipse{
+        box-sizing: border-box;
+    position: absolute;
+    width: 59px;
+    height: 59px;
+    left: 1200px;
+    top: 35px;
+    
+
+    }
+    .btn{
+        box-sizing: border-box;
+    position: absolute;
+    width: 47px;
+    height: 43px;
+    left: 1357px;
+    top: 28px;
+
+    }
+    .con .order:hover{
+        background-color: #E4C2C6;
+        color: black
+      }
+      h1{
+        color:antiquewhite;
+        text-transform:uppercase;
+        font-family: 'Montserrat';
+       font-style: normal;
+      }
+
+
+    td{
+      color:antiquewhite;
+      margin: 12;
+      font-family: 'Montserrat';
+    font-style: normal;
+ 
+    }
+    #country{
+      background-color: white;
+      line-height: 24px;
+    border-radius: 15px;
+    height: 50px;
+    }
+    #userid{
+      line-height: 24px;
+    border-radius: 15px;
+    height: 50px;
+    }
+    #password{
+      line-height: 24px;
+    border-radius: 15px;
+    height: 50px;
+    }
+    #name{
+      line-height: 24px;
+    border-radius: 15px;
+    height: 50px;
+    }
+    #size1{
+      line-height: 24px;
+    border-radius: 15px;
+    }
+    #zip{
+      line-height: 24px;
+      height: 50px;
+    border-radius: 15px;
+    }
+    #email{
+      line-height: 24px;
+    border-radius: 15px;
+    height: 50px;
+    }
+    #size{
+      line-height: 24px;
+    border-radius: 15px;
+    height: 50px;
+    }
+
+    </style>
+    
+    
+
+   
+</head>
+<body class="pattern">
+  <div class="photo">
+    <img class=photo
+          
+            src="zet.png"
+            alt="coffee cup"
+            border=0;
+            ></div>
+            <h1> Registration Form</h1>
+    <table>
+    <tr><td> User Id: </td> <td><input type="text" placeholder="5-12ын урттай" required id="userid"><span id="spanname2"></span></td> </tr>
+    <tr><td> Password: </td> <Td><input type="text" placeholder="7-гоос 12-ын урттай нууц үг" id="password" required><span id="spanname1"></span> </Td> </tr>
+    <tr><td> name: </td><td><input type="Text" placeholder="цагаан толгойн үсэгээр" id="name" required><span id="spanname" ></span></td></tr>
+    <tr> <td> Address: </td><td><input type="Text" placeholder="заавал биш" id="size1"> </td> </tr>
+    <tr> <td> Country: </td><td><select required id="country" ><option>select country</option> <option> Mongolia</option><option> China</option>  </select><span id="spanname3"></span>  </td> </tr>
+    <tr> <td> ZIP code: </td><td> <input type="text" placeholder="3 оронтой байна" required id="zip"><span id="spanname4"></span></td> </tr>
+    <tr> <td> Email: </td><td> <input type="text" placeholder="форматын дагуу оруулна уу" id="email" required><span id="spanname5"></span></td> </tr>
+    <tr> <td> Sex:</td><Td> <input type="Radio" name="gender" id="male"> Male  
+        <input type="Radio" name="gender" id="female">Female <span id="spanname6"></span> </Td></tr>
+    <tr> <td> Language: </td> <td> <input type="checkbox" name="lan" id="c1" >English
+                                    <input type="checkbox" name="lan" id="c2" >Non English<span id="spanname7"></span> </td> </tr>
+    <tr> <td > About: </td><td style> <input type="text" id="size" placeholder="заавал биш"></td> </tr>
+    <Tr><Td><button value="Submit" onclick="validationName()" class="order order-primary" >Submit </button></Td></Tr>
+    </table>
+  
+</a>
+</body>
+</html>

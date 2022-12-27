@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> LOG IN </title>
+       <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="zet.png" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    function validationlogin(){
+      var name = document.getElementById("name1").value
+      var pattern =/[^a-zA-Z]/g;
+      var result_name = name.match(pattern);
+       if(result_name!=null || name==""){
+            document.getElementById("spanname").innerHTML = "<font color='red'>Username is wrong</font>";
+       }
+       else{document.getElementById("spanname").innerHTML=1;}
+       name =document.getElementById("name").value;
+       if(name.length<=6 || name.length>=11){
+        document.getElementById("spanname1").innerHTML = "<font color='red'>Password is wrong</font>";}
+        else{document.getElementById("spanname1").innerHTML = 1;
+    }
+    if(document.getElementById("spanname").innerHTML == 1 && document.getElementById("spanname1").innerHTML == 1){
+      window.location.href="index.html";
+    }
+
+    
+    }
+  </script>
+   <style type="text/css">
+     #container{
+    position: relative;
+    width: 1300px;
+    height: 700px;
+    background: #161214;
+   
+    }
+    #name{
+        position: absolute;
+    width: 622px;
+    height: 69px;
+    left: 370px;
+    top: 320px; 
+    padding-left: 20px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    border-radius: 15px;
+    color: #000000;
+    }
+    #name1{
+    position: absolute;
+    width: 622px;
+    height: 69px;
+    left: 370px;
+    top: 226px;
+    padding-left: 20px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+    border-radius: 15px;
+
+    }
+    .pattern{
+  background: url("/assets/images/Sprinkle.svg");
+  background-size: cover;
+  background-position: center;
+  padding-block: var(--section-padding);
+    }
+    .photo{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 570px;
+    top: 50px;
+
+    }
+    .login {
+        position: absolute;
+        left: 620px;
+    top: 415px;
+  color: var(--white);
+  font-size: var(--fs-11);
+  font-weight: var(--fw-700);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 30px;
+  border: 2px solid var(--citrine);
+  border-radius: 50px;
+  transition: var(--transition-1);
+}
+
+.login > ion-icon { font-size: 18px; }
+
+.login-primary { background: var(--rich-black-fogra-29); }
+
+.login-primary:is(:hover, :focus) {
+  background: var(--citrine);
+  color: var(--xiketic);
+}
+    #forgot{
+        position: absolute;
+    width: 245px;
+    height: 33px;
+    left: 403px;
+    top: 405px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+
+    }
+    #register{
+      position: absolute;
+    width: 245px;
+    height: 33px;
+    left: 803px;
+    top: 440px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    
+
+    }
+    .input-group span{
+      position: absolute;
+    width: 622px;
+    height: 100px;
+    left: 1000px;
+    top: 250px; 
+    }
+    .input-password span{
+      position: absolute;
+    width: 622px;
+    height: 140px;
+    left: 1000px;
+    top: 340px; 
+
+    }
+    </style>
+   
+</head>
+<body class="pattern">
+    <img class=photo
+            src="zet.png"
+            alt="coffee cup"
+            border=0;
+            >
+    <a href="window7.html" id="forgot">Forgot Password?</a>
+    <div class="input-group">
+    <input type="text" placeholder="USERNAME" id="name1"><span id="spanname"></span></div>
+    <div class="input-password">
+    <input type="text" placeholder="PASSWORD" id="name"><span id="spanname1"></span></div>
+    <a>
+    <Button class="login login-primary" onclick="validationlogin()" >LOG IN</Button>
+    <a href="window8.html" id="register"> CREATE A NEW ACCOUNT </a>
+</a>
+</body>
+</html>
